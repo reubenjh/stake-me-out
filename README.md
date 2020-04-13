@@ -1,4 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Plan
+
+Using `chart.js` to track details of houses we're interested in over time. Not sure what the db will look like yet.
+
+The longterm plan is that there will be chart for each area we are looking at i.e. Sumner, Raumati, or maybe they will be lines on one chart? I dunno.
+
+MVP is just one chart for Raumati, and a page to add a house to the db.
+
+The App component will have router thingies that has define which of those two components render
+- Chart (at /)
+- AddHouse (at /add)
+
+The navbar will have buttons to navigate between them.
+
+We need to decide what type of chart we use to represent the data.
+
+# Create React App stuff.....
 
 ## Available Scripts
 
