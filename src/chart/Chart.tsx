@@ -1,14 +1,18 @@
 import React from 'react';
 import chartjs from 'chart.js';
-import './App.css';
+import './Chart.css';
 
-function App() {
+export default function Chart() {
 
     document.addEventListener("DOMContentLoaded", (): void => {
+        // Get canvas element
         let canvas: HTMLCanvasElement = document.getElementById('chart') as HTMLCanvasElement;
+        
         if (canvas) {
+            // Get canvas context
             var context: CanvasRenderingContext2D = canvas.getContext('2d') as CanvasRenderingContext2D;
-            let myChart = new chartjs.Chart(context, {
+            // Create chart
+            new chartjs.Chart(context, {
                 type: 'bar',
                 data: {
                     labels: ['Red', 'Blue', 'Yellow', 'Green'],
@@ -44,12 +48,8 @@ function App() {
     });
 
     return (
-        <div className="App">
-            <header className="App-header">
-                <canvas id="chart"></canvas>
-            </header>
+        <div data-testid="chart" className="chart">
+            <canvas id="chart"></canvas>
         </div>
     );
 }
-
-export default App;
